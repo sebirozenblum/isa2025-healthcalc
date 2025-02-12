@@ -18,7 +18,7 @@
     <dependencies>
       <dependency>
         <groupId>org.junit</groupId>
-        <artifactId>junit-boom</artifactId>
+        <artifactId>junit-bom</artifactId>
         <version>5.11.4</version>
         <type>pom</type>
         <scope>import</scope>
@@ -36,6 +36,7 @@
 
   <build>
     <plugins>
+    <plugin>
       <artifactId>maven-surefire-plugin</artifactId>
       <version>3.5.2</version>
       <configuration>
@@ -59,6 +60,7 @@
           <usePhrasedClassNameInTestCaseSummary>true</usePhrasedClassNameInTestCaseSummary>
         </statelessTestsetInfoReporter>
       </configuration>
+    </plugin>
     </plugins>
   </build>
 
