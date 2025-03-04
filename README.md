@@ -31,3 +31,4 @@ En total se han realizado 13 tests para este método.
 
 Luego de ejecutar los 20 tests (13 para el primer método y 7 para el segundo), se obtienen los siguientes resultados:
 
+![alt text](test_results.png)
