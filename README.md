@@ -1,7 +1,7 @@
 # isa2025-healthcalc
 Health calculator used in Ingeniería del Software Avanzada
 
-## Clase HealthCalc.java - casos de prueba:
+## Clase HealthCalc.java - casos de prueba
 
 La clase HealthCalc.java consta de dos métodos:
 
@@ -26,3 +26,8 @@ Se han identificado los siguientes casos de prueba:
 - Funcionamiemto correcto: el método debería devolver el valor esperado según la fórmula cuando ambos parámetros son correctos (es decir, cuando no es ningún caso de los anteriormente mencionados). Este caso de prueba se implementa con dos tests por separado: uno para `genero` == `m` con el resto de los parámetros válidos y otro para genero `genero` == `w` con el resto de los parámetros válidos.
 
 En total se han realizado 13 tests para este método.
+
+## Ejecución de los tests
+
+Luego de ejecutar los 20 tests (13 para el primer método y 7 para el segundo), se obtienen los siguientes resultados:
+

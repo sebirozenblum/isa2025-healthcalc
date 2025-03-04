@@ -1,6 +1,5 @@
 package healthcalc;
 
-
 public class HealthCalcImp implements HealthCalc {
 
     @Override
@@ -8,12 +7,23 @@ public class HealthCalcImp implements HealthCalc {
 
         float IW;
 
-        if (gender == 'M') {
-            IW = height - 100 - (height - 150) / 4;
+        if (height < 80 || height > 210) {
+            throw new Exception("La altura debe estar dentro de un rango adecuado (80-210)");
+        }
+
+        if (gender != 'w' && gender != 'm') {
+            throw new Exception("Se debe introducir un género válido (m/w)");
         }
 
         else {
-            IW = height - 100 - (height - 150) / (float) 2.5;
+            if (gender == 'm') {
+                IW = height - 100 - (height - 150) / 4;
+            }
+
+            else {
+                IW = (float) (height - 100 - (height - 150) / 2.5);
+            }
+
         }
 
         return IW;
@@ -24,12 +34,31 @@ public class HealthCalcImp implements HealthCalc {
     public float basalMetabolicRate(float weight, int height, int age, char gender) throws Exception {
         float BMR;
 
-        if (gender == 'M') {
-            BMR = (float) (88.362 + 13.397 * weight + 4.799 * height - 5.677 * age);
+        if (gender != 'w' && gender != 'm') {
+            throw new Exception("Se debe introducir un género válido (m/w)");
+        }
+
+        if (height < 80 || height > 210) {
+            throw new Exception("La altura debe estar dentro de un rango adecuado (150-210)");
+        }
+
+        if (weight <= 0 || weight > 200) {
+            throw new Exception("El peso debe estar dentro de un rango adecuado (0-200)");
+        }
+
+        if (age <= 0 || age > 105) {
+            throw new Exception("La edad debe estar dentro de un rango adecuado");
         }
 
         else {
-            BMR = (float) (447.593 + 9.247 * weight + 3.098 * height - 4.330 * age);
+            if (gender == 'm') {
+                BMR = (float) (88.362 + 13.397 * weight + 4.799 * height - 5.677 * age);
+            }
+
+            else {
+                BMR = (float) (447.593 + 9.247 * weight + 3.098 * height - 4.330 * age);
+            }
+
         }
 
         return BMR;
