@@ -1,0 +1,36 @@
+Nombre: Configuración del sistema de unidades
+Actor principal: usuario
+Nivel: user goal
+Stakeholders: 
+- Usuario: es quien ejecuta y se beneficia del caso de uso
+- Equipo de desarrollo: es quien debe permitir que el caso de uso pueda llevarse a cabo
+Scope: la calculadora de salud (Health Calculator)
+Descripción: Caso de uso que permite al usuario seleccionar el sistema de unidades utilizado en la calculadora (internacional o imperial).
+
+Precondiciones:
+- El usuario tiene acceso al sistema y lo puede utilizar correctamente.
+
+Garantía mínima:
+- Se mantiene vigente el sistema de unidades previamente establecido, sin alterar el funcionamiento de la calculadora.
+
+Garantía de éxito:
+- El sistema actualiza correctamente la opción elegida y muestra un mensaje de confirmación indicando que la configuración ha sido actualizada con éxito.
+
+Escenario principal:
+	1.	El usuario accede a la configuración del sistema.
+	2.	Dentro de las opciones disponibles, selecciona “Sistema de Unidades”.
+	3.	El sistema muestra dos opciones:
+	•	Sistema Internacional (kg, cm)
+	•	Sistema Imperial (lb, in)
+	4.	El usuario elige el sistema de unidades que desea utilizar.
+	5.	El sistema guarda la selección y actualiza las mediciones y cálculos para reflejar el sistema de unidades elegido.
+	6.	Se muestra un mensaje de confirmación indicando que la configuración ha sido actualizada con éxito.
+
+Escenario alternativo:
+
+4a. El usuario no realiza ninguna selección y decide salir de la configuración:
+	•	4a.1. El sistema mantiene la configuración previa sin realizar cambios.
+
+Postcondiciones:
+- El sistema almacena la configuración seleccionada por el usuario.
+- Todas las mediciones y cálculos en el sistema reflejan el sistema de unidades elegido.
