@@ -115,8 +115,6 @@ Postcondiciones:
 - Todas las mediciones y cálculos en el sistema reflejan el sistema de unidades elegido.
 ```
 
-![alt text](/doc/HealthCalc_UseCaseDiagram_2.png)
-
 </details>
 
 ___
