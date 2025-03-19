@@ -1,0 +1,4 @@
+
+As a user
+I want to calculate my ideal weight
+So that I can have a healthy life
