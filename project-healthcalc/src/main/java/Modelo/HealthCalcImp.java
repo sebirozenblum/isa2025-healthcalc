@@ -1,4 +1,4 @@
-package healthcalc;
+package Modelo;
 
 public class HealthCalcImp implements HealthCalc {
 
