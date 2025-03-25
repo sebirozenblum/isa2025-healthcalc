@@ -3,7 +3,7 @@ package healthcalc;
 import javax.swing.*;
 import java.awt.*;
 
-public class VistaImp extends JFrame {
+public class VistaImp extends JFrame implements Vista {
 
     private JPanel panelPrincipal;
     private JTabbedPane tabbedPane;
