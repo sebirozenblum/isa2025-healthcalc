@@ -1,4 +1,7 @@
-package healthcalc;
+package healthcalc.Controlador;
+
+import healthcalc.Modelo.HealthCalc;
+import healthcalc.Vista.Vista;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -16,16 +19,35 @@ public class Controlador implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
 
-        if(e.getActionCommand().equals("Calcular")) {
+        if (e.getActionCommand().equals("Calcular")) {
             try {
-                String input = vista.getInputValue();
-                Integer n = Integer.parseInt(input);
-                float resultado = modelo.idealWeight(n, 'w');
-                this.vista.mostrarTexto("El factorial de " + n + " es: " + resultado);
-                System.out.println("El factorial de " + n + " es: " + resultado);
-            }
-            catch (Exception ex) {
-                vista.mostrarTexto("La altura debe estar dentro de un rango adecuado (80-210)");
+                int selectedIndex = vista.getTabbedPane().getSelectedIndex();
+                String tituloPestana = vista.getTabbedPane().getTitleAt(selectedIndex);
+
+                if (tituloPestana.equals("IW")) {
+                    int altura = (int) vista.getSpinnerAlturaIW().getValue();
+                    if (vista.getRadioButtonHombreIW().isSelected()) {
+                        float resultado = modelo.idealWeight(altura, 'm');
+                        vista.mostrarTexto("Ideal weight: " + Float.toString(resultado) + " kg");
+                    } else if (vista.getRadioButtonMujerIW().isSelected()) {
+                        float resultado = modelo.idealWeight(altura, 'w');
+                        vista.mostrarTexto("Ideal weight: " + Float.toString(resultado) + " kg");
+                    }
+                } else if (tituloPestana.equals("BMR")) {
+                    int altura = (int) vista.getSpinnerAlturaBMR().getValue();
+                    int edad = (int) vista.getSpinnerEdad().getValue();
+                    int peso = Integer.parseInt(vista.getTextFieldPeso().getText());
+                    if (vista.getRadioButtonHombreBMR().isSelected()) {
+                        float resultado = modelo.basalMetabolicRate(peso, altura, edad, 'm');
+                        vista.mostrarTexto("Basal metabolic rate: " + Float.toString(resultado) + " kcal/day");
+                    }
+                    else if (vista.getRadioButtonMujerBMR().isSelected()) {
+                        float resultado = modelo.basalMetabolicRate(peso, altura, edad, 'w');
+                        vista.mostrarTexto("Basal metabolic rate: " + Float.toString(resultado) + " kcal/day");
+                    }
+                }
+            } catch (Exception ex) {
+                vista.mostrarTexto("ERROR: " + ex.getMessage());
             }
         }
 
