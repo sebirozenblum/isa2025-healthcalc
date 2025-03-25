@@ -1,4 +1,4 @@
-package Modelo;
+package healthcalc.Modelo;
 
 /**
  * Calculator of some health parameters of persons.

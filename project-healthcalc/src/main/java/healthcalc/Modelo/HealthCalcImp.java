@@ -1,4 +1,4 @@
-package Modelo;
+package healthcalc.Modelo;
 
 public class HealthCalcImp implements HealthCalc {
 
@@ -43,7 +43,7 @@ public class HealthCalcImp implements HealthCalc {
         }
 
         if (weight <= 0 || weight > 200) {
-            throw new Exception("El peso debe estar dentro de un rango adecuado (0-200)");
+            throw new Exception("el peso debe estar dentro de un rango adecuado (0-200)");
         }
 
         if (age <= 0 || age > 105) {

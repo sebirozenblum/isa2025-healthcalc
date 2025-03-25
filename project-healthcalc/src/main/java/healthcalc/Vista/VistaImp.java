@@ -31,11 +31,11 @@ public class VistaImp extends JFrame implements Vista {
         panelTitulo.setBackground(new Color(255, 222, 114, 255));
         labelTitulo = new JLabel();
         labelTitulo.setText("HEALTH CALCULATOR");
-        labelTitulo.setFont(new Font("Chakra Petch", Font.BOLD, 32));
+        labelTitulo.setFont(new Font("Chakra Petch", Font.BOLD, 38));
         labelTitulo.setHorizontalAlignment(SwingConstants.CENTER);
         labelSubtitulo = new JLabel();
         labelSubtitulo.setText("Calculate your ideal weight (IW) and basal metabolic rate (BMR)");
-        labelSubtitulo.setFont(new Font("Chakra Petch", Font.PLAIN, 18));
+        labelSubtitulo.setFont(new Font("Chakra Petch", Font.PLAIN, 20));
         labelSubtitulo.setHorizontalAlignment(SwingConstants.CENTER);
         panelTitulo.add(labelTitulo, BorderLayout.NORTH);
         panelTitulo.add(labelSubtitulo, BorderLayout.SOUTH);
@@ -48,21 +48,24 @@ public class VistaImp extends JFrame implements Vista {
 
         buttonCalcular = new JButton();
         buttonCalcular.setText("Calcular");
-        buttonCalcular.setBackground(Color.red);
-        buttonCalcular.setSize(150, 100);
+        buttonCalcular.setFont(new Font("Chakra Petch", Font.BOLD, 45));
         buttonCalcular.setForeground(Color.red);
-        buttonCalcular.setFont(new Font("Chakra Petch", Font.BOLD, 28));
+        buttonCalcular.setBackground(Color.red);
+        buttonCalcular.setPreferredSize(new Dimension(60, 40));
         buttonCalcular.setHorizontalAlignment(SwingConstants.CENTER);
-        buttonCalcular.setBorder(BorderFactory.createEtchedBorder());
         panelButton.add(buttonCalcular);
 
+
         labelResultado = new JLabel();
+        labelResultado.setFont(new Font("Chakra Petch", Font.PLAIN, 16));
+        labelResultado.setHorizontalAlignment(SwingConstants.CENTER);
         buttonCalcular.setFont(new Font("Chakra Petch", Font.PLAIN, 18));
         buttonCalcular.setHorizontalAlignment(SwingConstants.CENTER);
         panelButton.add(labelResultado);
 
         // Panel de pestañas (tabbed pane)
         tabbedPane = new JTabbedPane();
+        tabbedPane.setFont(new Font("Chakra Petch", Font.PLAIN, 14));
         panelPrincipal.add(tabbedPane, BorderLayout.CENTER);
 
         // Panel IW
@@ -180,6 +183,7 @@ public class VistaImp extends JFrame implements Vista {
         this.setVisible(true);
     }
 
+    @Override
     public void mostrarTexto(String mensaje) {
         this.labelResultado.setText(mensaje);
     }
@@ -190,9 +194,48 @@ public class VistaImp extends JFrame implements Vista {
         this.buttonCalcular.setActionCommand("Calcular");
     }
 
-    public static void main(String[] args) {
-        VistaImp vistaImp = new VistaImp();
-        Controlador controlador = new Controlador(new HealthCalcImp(), vistaImp);
-        vistaImp.registrarControlador(controlador);
+    @Override
+    public JSpinner getSpinnerAlturaIW() {
+        return spinnerAlturaIW;
+    }
+
+    @Override
+    public JSpinner getSpinnerAlturaBMR() {
+        return spinnerAlturaBMR;
+    }
+
+    @Override
+    public JSpinner getSpinnerEdad() {
+        return spinnerEdad;
+    }
+
+    @Override
+    public JTabbedPane getTabbedPane() {
+        return tabbedPane;
+    }
+
+    @Override
+    public JRadioButton getRadioButtonHombreIW() {
+        return radioButtonHombreIW;
+    }
+
+    @Override
+    public JRadioButton getRadioButtonMujerIW() {
+        return radioButtonMujerIW;
+    }
+
+    @Override
+    public JRadioButton getRadioButtonHombreBMR() {
+        return radioButtonHombreBMR;
+    }
+
+    @Override
+    public JRadioButton getRadioButtonMujerBMR() {
+        return radioButtonMujerBMR;
+    }
+
+    @Override
+    public JTextField getTextFieldPeso() {
+        return textFieldPeso;
     }
 }

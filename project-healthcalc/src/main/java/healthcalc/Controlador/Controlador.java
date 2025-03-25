@@ -28,10 +28,10 @@ public class Controlador implements ActionListener {
                     int altura = (int) vista.getSpinnerAlturaIW().getValue();
                     if (vista.getRadioButtonHombreIW().isSelected()) {
                         float resultado = modelo.idealWeight(altura, 'm');
-                        vista.mostrarTexto("Ideal weight: " + Float.toString(resultado) + " kg");
+                        vista.mostrarTexto("Ideal weight: " + String.format("%.1f", resultado) + " kg");
                     } else if (vista.getRadioButtonMujerIW().isSelected()) {
                         float resultado = modelo.idealWeight(altura, 'w');
-                        vista.mostrarTexto("Ideal weight: " + Float.toString(resultado) + " kg");
+                        vista.mostrarTexto("Ideal weight: " + String.format("%.1f", resultado) + " kg");
                     }
                 } else if (tituloPestana.equals("BMR")) {
                     int altura = (int) vista.getSpinnerAlturaBMR().getValue();
@@ -39,15 +39,15 @@ public class Controlador implements ActionListener {
                     int peso = Integer.parseInt(vista.getTextFieldPeso().getText());
                     if (vista.getRadioButtonHombreBMR().isSelected()) {
                         float resultado = modelo.basalMetabolicRate(peso, altura, edad, 'm');
-                        vista.mostrarTexto("Basal metabolic rate: " + Float.toString(resultado) + " kcal/day");
+                        vista.mostrarTexto("Basal metabolic rate: " + String.format("%.1f", resultado) + " kcal/day");
                     }
                     else if (vista.getRadioButtonMujerBMR().isSelected()) {
                         float resultado = modelo.basalMetabolicRate(peso, altura, edad, 'w');
-                        vista.mostrarTexto("Basal metabolic rate: " + Float.toString(resultado) + " kcal/day");
+                        vista.mostrarTexto("Basal metabolic rate: " + String.format("%.1f", resultado) + " kcal/day");
                     }
                 }
             } catch (Exception ex) {
-                vista.mostrarTexto("ERROR: " + ex.getMessage());
+                vista.mostrarTexto("El peso debe estar en un rango adecuado (0-200)");
             }
         }
 
