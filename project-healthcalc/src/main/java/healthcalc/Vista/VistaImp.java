@@ -8,24 +8,27 @@ import java.awt.*;
 
 public class VistaImp extends JFrame implements Vista {
 
-    private JPanel panelPrincipal;
     private JTabbedPane tabbedPane;
-    private JPanel panelIW, panelBMR, panelButton, panelTitulo;
+    private JPanel panelPrincipal, panelIW, panelBMR, panelButton, panelTitulo, panelSexoIW, panelButtonGroupIW, panelSexoBMR, panelButtonGroupBMR;
     private JTextField textFieldNombre;
-    private JLabel labelTitulo, labelSubtitulo, labelResultado;;
-    private JButton button;
+    private JLabel labelTitulo, labelSubtitulo, labelAlturaIW, labelSexoIW, labelAlturaBMR, labelSexoBMR, labelEdad, labelPeso, labelResultado;
+    private JRadioButton radioButtonHombreIW, radioButtonMujerIW, radioButtonHombreBMR, radioButtonMujerBMR;
+    private ButtonGroup buttonGroupSexoIW, buttonGroupSexoBMR;
+    private JButton buttonCalcular;
+    private JSpinner spinnerAlturaIW, spinnerAlturaBMR, spinnerEdad;
 
 
     public VistaImp() {
 
         // Panel principal
         panelPrincipal = new JPanel();
-        panelPrincipal.setBackground(Color.lightGray);
+        panelPrincipal.setBackground(new Color(227, 164, 104));
         panelPrincipal.setLayout(new BorderLayout(10, 10));
         this.add(panelPrincipal);
 
         panelTitulo = new JPanel();
         panelTitulo.setLayout(new BorderLayout(0, 0));
+        panelTitulo.setBackground(new Color(227, 164, 104));
         labelTitulo = new JLabel();
         labelTitulo.setText("HEALTH CALCULATOR");
         labelTitulo.setFont(new Font("Chakra Petch", Font.BOLD, 28));
@@ -43,19 +46,19 @@ public class VistaImp extends JFrame implements Vista {
         panelButton.setLayout(new GridLayout(1, 2));
         panelPrincipal.add(panelButton, BorderLayout.SOUTH);
 
-        button = new JButton();
-        button.setText("Calcular");
-        button.setBackground(Color.red);
-        button.setSize(150, 100);
-        button.setForeground(Color.red);
-        button.setFont(new Font("Chakra Petch", Font.BOLD, 28));
-        button.setHorizontalAlignment(SwingConstants.CENTER);
-        button.setBorder(BorderFactory.createEtchedBorder());
-        panelButton.add(button);
+        buttonCalcular = new JButton();
+        buttonCalcular.setText("Calcular");
+        buttonCalcular.setBackground(Color.red);
+        buttonCalcular.setSize(150, 100);
+        buttonCalcular.setForeground(Color.red);
+        buttonCalcular.setFont(new Font("Chakra Petch", Font.BOLD, 28));
+        buttonCalcular.setHorizontalAlignment(SwingConstants.CENTER);
+        buttonCalcular.setBorder(BorderFactory.createEtchedBorder());
+        panelButton.add(buttonCalcular);
 
         labelResultado = new JLabel();
-        button.setFont(new Font("Chakra Petch", Font.PLAIN, 18));
-        button.setHorizontalAlignment(SwingConstants.CENTER);
+        buttonCalcular.setFont(new Font("Chakra Petch", Font.PLAIN, 18));
+        buttonCalcular.setHorizontalAlignment(SwingConstants.CENTER);
         panelButton.add(labelResultado);
 
         // Panel de pestañas (tabbed pane)
@@ -65,12 +68,49 @@ public class VistaImp extends JFrame implements Vista {
         // Panel IW
         panelIW = new JPanel();
         panelIW.setLayout(new GridLayout(2, 2));
-        panelIW.setBackground(Color.yellow);
+        panelIW.setBackground(new Color(230, 230, 230));
         tabbedPane.addTab("IW", panelIW);
+
+        labelAlturaIW = new JLabel();
+        labelAlturaIW.setText("Altura (cm): ");
+        labelAlturaIW.setHorizontalAlignment(SwingConstants.CENTER);
+        labelAlturaIW.setFont(new Font("Chakra Petch", Font.PLAIN, 18));
+        panelIW.add(labelAlturaIW);
+
+        spinnerAlturaIW = new JSpinner();
+        spinnerAlturaIW.setModel(new SpinnerNumberModel(100, 80, 210, 1));
+        spinnerAlturaIW.setFont(new Font("Chakra Petch", Font.PLAIN, 16));
+        panelIW.add(spinnerAlturaIW);
+
+        labelSexoIW = new JLabel();
+        labelSexoIW.setText("Sexo: ");
+        labelSexoIW.setFont(new Font("Chakra Petch", Font.PLAIN, 18));
+        labelSexoIW.setHorizontalAlignment(SwingConstants.CENTER);
+        panelIW.add(labelSexoIW);
+
+        buttonGroupSexoIW = new ButtonGroup();
+        radioButtonHombreIW = new JRadioButton("Hombre");
+        radioButtonHombreIW.setFont(new Font("Chakra Petch", Font.PLAIN, 16));
+        buttonGroupSexoIW.add(radioButtonHombreIW);
+        radioButtonMujerIW = new JRadioButton("Mujer");
+        radioButtonMujerIW.setFont(new Font("Chakra Petch", Font.PLAIN, 16));
+        buttonGroupSexoIW.add(radioButtonMujerIW);
+
+        panelButtonGroupIW = new JPanel();
+        panelButtonGroupIW.setLayout(new FlowLayout());
+        panelButtonGroupIW.setBackground(new Color(230, 230, 230));
+        panelButtonGroupIW.add(radioButtonHombreIW);
+        panelButtonGroupIW.add(radioButtonMujerIW);
+        panelSexoIW = new JPanel();
+        panelSexoIW.setLayout(new BorderLayout(0, 0));
+        panelSexoIW.setBackground(new Color(230, 230, 230));
+        panelSexoIW.add(panelButtonGroupIW, BorderLayout.CENTER);
+        panelIW.add(panelSexoIW);
+
 
         // Panel BMR
         panelBMR = new JPanel();
-        panelBMR.setBackground(Color.blue);
+        panelBMR.setBackground(new Color(230, 230, 230));
         tabbedPane.addTab("BMR", panelBMR);
 
 
@@ -95,8 +135,8 @@ public class VistaImp extends JFrame implements Vista {
 
     @Override
     public void registrarControlador(Controlador controlador) {
-        this.button.addActionListener(controlador);
-        this.button.setActionCommand("Calcular");
+        this.buttonCalcular.addActionListener(controlador);
+        this.buttonCalcular.setActionCommand("Calcular");
     }
 
     public static void main(String[] args) {
