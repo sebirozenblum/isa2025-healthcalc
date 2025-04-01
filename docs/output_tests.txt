@@ -1,0 +1,732 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< uma.isa:project-healthcalc >---------------------
+[INFO] Building project-healthcalc 1.0-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ project-healthcalc ---
+[INFO] skip non existing resourceDirectory /Users/sebirozenblum/Documents/UMA/IngSalud/ISA/isa2025-healthcalc/project-healthcalc/src/main/resources
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ project-healthcalc ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 2 source files with javac [debug target 23] to target/classes
+[INFO] 
+[INFO] --- resources:3.3.1:testResources (default-testResources) @ project-healthcalc ---
+[INFO] Copying 2 resources from src/test/resources to target/test-classes
+[INFO] 
+[INFO] --- compiler:3.13.0:testCompile (default-testCompile) @ project-healthcalc ---
+[INFO] Recompiling the module because of changed dependency.
+[INFO] Compiling 5 source files with javac [debug target 23] to target/test-classes
+[INFO] 
+[INFO] --- surefire:3.5.2:test (default-test) @ project-healthcalc ---
+[INFO] Using auto detected provider org.apache.maven.surefire.junitplatform.JUnitPlatformProvider
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running Tests para la calculadora de salud.
+[INFO] Tests run: 20, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.049 s -- in Tests para la calculadora de salud.
+[INFO] Running healthcalc.BDD.RunCucumberTest
+
+@tag @tag1
+Scenario Outline: Calculando el BMR correctamente para genero femenino # healthcalc/BMR.feature:17
+  Given tengo una calculadora de salud                                 # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un peso 50.0                                                     # healthcalc.BDD.StepDefinitions.un_peso(java.lang.Double)
+  And una altura 150                                                   # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  And una edad 20                                                      # healthcalc.BDD.StepDefinitions.una_edad(java.lang.Integer)
+  And un genero 'w'                                                    # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  When calculo el BMR                                                  # healthcalc.BDD.StepDefinitions.calculo_el_bmr()
+  Then el sistema devuelve 1288                                        # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag1
+Scenario Outline: Calculando el BMR correctamente para genero femenino # healthcalc/BMR.feature:18
+  Given tengo una calculadora de salud                                 # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un peso 55.0                                                     # healthcalc.BDD.StepDefinitions.un_peso(java.lang.Double)
+  And una altura 155                                                   # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  And una edad 25                                                      # healthcalc.BDD.StepDefinitions.una_edad(java.lang.Integer)
+  And un genero 'w'                                                    # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  When calculo el BMR                                                  # healthcalc.BDD.StepDefinitions.calculo_el_bmr()
+  Then el sistema devuelve 1328                                        # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag1
+Scenario Outline: Calculando el BMR correctamente para genero femenino # healthcalc/BMR.feature:19
+  Given tengo una calculadora de salud                                 # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un peso 60.0                                                     # healthcalc.BDD.StepDefinitions.un_peso(java.lang.Double)
+  And una altura 160                                                   # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  And una edad 30                                                      # healthcalc.BDD.StepDefinitions.una_edad(java.lang.Integer)
+  And un genero 'w'                                                    # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  When calculo el BMR                                                  # healthcalc.BDD.StepDefinitions.calculo_el_bmr()
+  Then el sistema devuelve 1368                                        # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag1
+Scenario Outline: Calculando el BMR correctamente para genero femenino # healthcalc/BMR.feature:20
+  Given tengo una calculadora de salud                                 # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un peso 65.0                                                     # healthcalc.BDD.StepDefinitions.un_peso(java.lang.Double)
+  And una altura 165                                                   # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  And una edad 35                                                      # healthcalc.BDD.StepDefinitions.una_edad(java.lang.Integer)
+  And un genero 'w'                                                    # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  When calculo el BMR                                                  # healthcalc.BDD.StepDefinitions.calculo_el_bmr()
+  Then el sistema devuelve 1408                                        # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag1
+Scenario Outline: Calculando el BMR correctamente para genero femenino # healthcalc/BMR.feature:21
+  Given tengo una calculadora de salud                                 # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un peso 70.0                                                     # healthcalc.BDD.StepDefinitions.un_peso(java.lang.Double)
+  And una altura 170                                                   # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  And una edad 40                                                      # healthcalc.BDD.StepDefinitions.una_edad(java.lang.Integer)
+  And un genero 'w'                                                    # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  When calculo el BMR                                                  # healthcalc.BDD.StepDefinitions.calculo_el_bmr()
+  Then el sistema devuelve 1448                                        # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag1
+Scenario Outline: Calculando el BMR correctamente para genero femenino # healthcalc/BMR.feature:22
+  Given tengo una calculadora de salud                                 # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un peso 75.0                                                     # healthcalc.BDD.StepDefinitions.un_peso(java.lang.Double)
+  And una altura 175                                                   # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  And una edad 45                                                      # healthcalc.BDD.StepDefinitions.una_edad(java.lang.Integer)
+  And un genero 'w'                                                    # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  When calculo el BMR                                                  # healthcalc.BDD.StepDefinitions.calculo_el_bmr()
+  Then el sistema devuelve 1488                                        # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag2
+Scenario Outline: Calculando el BMR correctamente para genero masculino # healthcalc/BMR.feature:36
+  Given tengo una calculadora de salud                                  # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un peso 70.0                                                      # healthcalc.BDD.StepDefinitions.un_peso(java.lang.Double)
+  And una altura 170                                                    # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  And una edad 30                                                       # healthcalc.BDD.StepDefinitions.una_edad(java.lang.Integer)
+  And un genero 'm'                                                     # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  When calculo el BMR                                                   # healthcalc.BDD.StepDefinitions.calculo_el_bmr()
+  Then el sistema devuelve 1672                                         # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag2
+Scenario Outline: Calculando el BMR correctamente para genero masculino # healthcalc/BMR.feature:37
+  Given tengo una calculadora de salud                                  # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un peso 75.0                                                      # healthcalc.BDD.StepDefinitions.un_peso(java.lang.Double)
+  And una altura 175                                                    # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  And una edad 35                                                       # healthcalc.BDD.StepDefinitions.una_edad(java.lang.Integer)
+  And un genero 'm'                                                     # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  When calculo el BMR                                                   # healthcalc.BDD.StepDefinitions.calculo_el_bmr()
+  Then el sistema devuelve 1734                                         # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag2
+Scenario Outline: Calculando el BMR correctamente para genero masculino # healthcalc/BMR.feature:38
+  Given tengo una calculadora de salud                                  # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un peso 80.0                                                      # healthcalc.BDD.StepDefinitions.un_peso(java.lang.Double)
+  And una altura 180                                                    # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  And una edad 40                                                       # healthcalc.BDD.StepDefinitions.una_edad(java.lang.Integer)
+  And un genero 'm'                                                     # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  When calculo el BMR                                                   # healthcalc.BDD.StepDefinitions.calculo_el_bmr()
+  Then el sistema devuelve 1797                                         # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag2
+Scenario Outline: Calculando el BMR correctamente para genero masculino # healthcalc/BMR.feature:39
+  Given tengo una calculadora de salud                                  # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un peso 85.0                                                      # healthcalc.BDD.StepDefinitions.un_peso(java.lang.Double)
+  And una altura 185                                                    # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  And una edad 45                                                       # healthcalc.BDD.StepDefinitions.una_edad(java.lang.Integer)
+  And un genero 'm'                                                     # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  When calculo el BMR                                                   # healthcalc.BDD.StepDefinitions.calculo_el_bmr()
+  Then el sistema devuelve 1859                                         # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag2
+Scenario Outline: Calculando el BMR correctamente para genero masculino # healthcalc/BMR.feature:40
+  Given tengo una calculadora de salud                                  # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un peso 90.0                                                      # healthcalc.BDD.StepDefinitions.un_peso(java.lang.Double)
+  And una altura 190                                                    # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  And una edad 50                                                       # healthcalc.BDD.StepDefinitions.una_edad(java.lang.Integer)
+  And un genero 'm'                                                     # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  When calculo el BMR                                                   # healthcalc.BDD.StepDefinitions.calculo_el_bmr()
+  Then el sistema devuelve 1922                                         # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag2
+Scenario Outline: Calculando el BMR correctamente para genero masculino # healthcalc/BMR.feature:41
+  Given tengo una calculadora de salud                                  # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un peso 95.0                                                      # healthcalc.BDD.StepDefinitions.un_peso(java.lang.Double)
+  And una altura 195                                                    # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  And una edad 55                                                       # healthcalc.BDD.StepDefinitions.una_edad(java.lang.Integer)
+  And un genero 'm'                                                     # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  When calculo el BMR                                                   # healthcalc.BDD.StepDefinitions.calculo_el_bmr()
+  Then el sistema devuelve 1985                                         # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag3
+Scenario: Calculando el BMR con altura cero   # healthcalc/BMR.feature:44
+  Given tengo una calculadora de salud        # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con altura igual a cero # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_altura_igual_a_cero()
+  Then el sistema lanza una Exception         # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag4
+Scenario Outline: Calculando el BMR con altura negativa # healthcalc/BMR.feature:57
+  Given tengo una calculadora de salud                  # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con altura negativa -1            # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_altura_negativa(java.lang.Integer)
+  Then el sistema lanza una Exception                   # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag4
+Scenario Outline: Calculando el BMR con altura negativa # healthcalc/BMR.feature:58
+  Given tengo una calculadora de salud                  # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con altura negativa -5            # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_altura_negativa(java.lang.Integer)
+  Then el sistema lanza una Exception                   # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag4
+Scenario Outline: Calculando el BMR con altura negativa # healthcalc/BMR.feature:59
+  Given tengo una calculadora de salud                  # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con altura negativa -120          # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_altura_negativa(java.lang.Integer)
+  Then el sistema lanza una Exception                   # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag5
+Scenario Outline: Calculando el BMR con altura positiva pequeña # healthcalc/BMR.feature:69
+  Given tengo una calculadora de salud                          # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con altura positiva pequeña 10            # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_altura_positiva_pequeña(java.lang.Integer)
+  Then el sistema lanza una Exception                           # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag5
+Scenario Outline: Calculando el BMR con altura positiva pequeña # healthcalc/BMR.feature:70
+  Given tengo una calculadora de salud                          # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con altura positiva pequeña 15            # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_altura_positiva_pequeña(java.lang.Integer)
+  Then el sistema lanza una Exception                           # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag5
+Scenario Outline: Calculando el BMR con altura positiva pequeña # healthcalc/BMR.feature:71
+  Given tengo una calculadora de salud                          # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con altura positiva pequeña 20            # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_altura_positiva_pequeña(java.lang.Integer)
+  Then el sistema lanza una Exception                           # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag5
+Scenario Outline: Calculando el BMR con altura positiva pequeña # healthcalc/BMR.feature:72
+  Given tengo una calculadora de salud                          # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con altura positiva pequeña 25            # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_altura_positiva_pequeña(java.lang.Integer)
+  Then el sistema lanza una Exception                           # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag6
+Scenario Outline: Calculando el BMR con altura positiva grande # healthcalc/BMR.feature:82
+  Given tengo una calculadora de salud                         # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con altura positiva grande 250           # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_altura_positiva_grande(java.lang.Integer)
+  Then el sistema lanza una Exception                          # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag6
+Scenario Outline: Calculando el BMR con altura positiva grande # healthcalc/BMR.feature:83
+  Given tengo una calculadora de salud                         # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con altura positiva grande 275           # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_altura_positiva_grande(java.lang.Integer)
+  Then el sistema lanza una Exception                          # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag6
+Scenario Outline: Calculando el BMR con altura positiva grande # healthcalc/BMR.feature:84
+  Given tengo una calculadora de salud                         # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con altura positiva grande 300           # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_altura_positiva_grande(java.lang.Integer)
+  Then el sistema lanza una Exception                          # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag6
+Scenario Outline: Calculando el BMR con altura positiva grande # healthcalc/BMR.feature:85
+  Given tengo una calculadora de salud                         # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con altura positiva grande 500           # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_altura_positiva_grande(java.lang.Integer)
+  Then el sistema lanza una Exception                          # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag7
+Scenario Outline: Calculando el BMR con genero no valido # healthcalc/BMR.feature:95
+  Given tengo una calculadora de salud                   # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con genero no valido 'a'           # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_genero_no_valido(java.lang.String)
+  Then el sistema lanza una Exception                    # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag7
+Scenario Outline: Calculando el BMR con genero no valido # healthcalc/BMR.feature:96
+  Given tengo una calculadora de salud                   # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con genero no valido 'b'           # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_genero_no_valido(java.lang.String)
+  Then el sistema lanza una Exception                    # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag7
+Scenario Outline: Calculando el BMR con genero no valido # healthcalc/BMR.feature:97
+  Given tengo una calculadora de salud                   # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con genero no valido 'c'           # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_genero_no_valido(java.lang.String)
+  Then el sistema lanza una Exception                    # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag8
+Scenario: Calculando el BMR con peso cero   # healthcalc/BMR.feature:100
+  Given tengo una calculadora de salud      # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con peso igual a cero # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_peso_igual_a_cero()
+  Then el sistema lanza una Exception       # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag9
+Scenario Outline: Calculando el BMR con peso negativo # healthcalc/BMR.feature:113
+  Given tengo una calculadora de salud                # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con peso negativo -1            # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_peso_negativo(java.lang.Integer)
+  Then el sistema lanza una Exception                 # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag9
+Scenario Outline: Calculando el BMR con peso negativo # healthcalc/BMR.feature:114
+  Given tengo una calculadora de salud                # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con peso negativo -5            # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_peso_negativo(java.lang.Integer)
+  Then el sistema lanza una Exception                 # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag9
+Scenario Outline: Calculando el BMR con peso negativo # healthcalc/BMR.feature:115
+  Given tengo una calculadora de salud                # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con peso negativo -120          # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_peso_negativo(java.lang.Integer)
+  Then el sistema lanza una Exception                 # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag10
+Scenario Outline: Calculando el BMR con peso positivo grande # healthcalc/BMR.feature:125
+  Given tengo una calculadora de salud                       # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con peso positivo grande 250           # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_peso_positivo_grande(java.lang.Integer)
+  Then el sistema lanza una Exception                        # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag10
+Scenario Outline: Calculando el BMR con peso positivo grande # healthcalc/BMR.feature:126
+  Given tengo una calculadora de salud                       # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con peso positivo grande 275           # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_peso_positivo_grande(java.lang.Integer)
+  Then el sistema lanza una Exception                        # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag10
+Scenario Outline: Calculando el BMR con peso positivo grande # healthcalc/BMR.feature:127
+  Given tengo una calculadora de salud                       # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con peso positivo grande 300           # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_peso_positivo_grande(java.lang.Integer)
+  Then el sistema lanza una Exception                        # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag10
+Scenario Outline: Calculando el BMR con peso positivo grande # healthcalc/BMR.feature:128
+  Given tengo una calculadora de salud                       # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con peso positivo grande 500           # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_peso_positivo_grande(java.lang.Integer)
+  Then el sistema lanza una Exception                        # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag11
+Scenario: Calculando el BMR con edad cero   # healthcalc/BMR.feature:131
+  Given tengo una calculadora de salud      # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con edad igual a cero # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_edad_igual_a_cero()
+  Then el sistema lanza una Exception       # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag12
+Scenario Outline: Calculando el BMR con edad negativa # healthcalc/BMR.feature:144
+  Given tengo una calculadora de salud                # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con edad negativa -1            # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_edad_negativa(java.lang.Integer)
+  Then el sistema lanza una Exception                 # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag12
+Scenario Outline: Calculando el BMR con edad negativa # healthcalc/BMR.feature:145
+  Given tengo una calculadora de salud                # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con edad negativa -5            # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_edad_negativa(java.lang.Integer)
+  Then el sistema lanza una Exception                 # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag12
+Scenario Outline: Calculando el BMR con edad negativa # healthcalc/BMR.feature:146
+  Given tengo una calculadora de salud                # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con edad negativa -45           # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_edad_negativa(java.lang.Integer)
+  Then el sistema lanza una Exception                 # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag13
+Scenario Outline: Calculando el BMR con edad positiva grande # healthcalc/BMR.feature:156
+  Given tengo una calculadora de salud                       # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con edad positiva grande 250           # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_edad_positiva_grande(java.lang.Integer)
+  Then el sistema lanza una Exception                        # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag13
+Scenario Outline: Calculando el BMR con edad positiva grande # healthcalc/BMR.feature:157
+  Given tengo una calculadora de salud                       # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con edad positiva grande 275           # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_edad_positiva_grande(java.lang.Integer)
+  Then el sistema lanza una Exception                        # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag13
+Scenario Outline: Calculando el BMR con edad positiva grande # healthcalc/BMR.feature:158
+  Given tengo una calculadora de salud                       # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con edad positiva grande 300           # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_edad_positiva_grande(java.lang.Integer)
+  Then el sistema lanza una Exception                        # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag13
+Scenario Outline: Calculando el BMR con edad positiva grande # healthcalc/BMR.feature:159
+  Given tengo una calculadora de salud                       # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el BMR con edad positiva grande 500           # healthcalc.BDD.StepDefinitions.calculo_el_bmr_con_edad_positiva_grande(java.lang.Integer)
+  Then el sistema lanza una Exception                        # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag1
+Scenario Outline: Calculando el BMR correctamente para genero femenino # healthcalc/HealthCalc.feature:111
+  Given tengo una calculadora de salud                                 # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un peso 50.0                                                     # healthcalc.BDD.StepDefinitions.un_peso(java.lang.Double)
+  And una altura 150                                                   # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  And una edad 20                                                      # healthcalc.BDD.StepDefinitions.una_edad(java.lang.Integer)
+  And un genero 'w'                                                    # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  When calculo el BMR                                                  # healthcalc.BDD.StepDefinitions.calculo_el_bmr()
+  Then el sistema devuelve 1288                                        # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag1
+Scenario Outline: Calculando el BMR correctamente para genero femenino # healthcalc/HealthCalc.feature:112
+  Given tengo una calculadora de salud                                 # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un peso 55.0                                                     # healthcalc.BDD.StepDefinitions.un_peso(java.lang.Double)
+  And una altura 155                                                   # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  And una edad 25                                                      # healthcalc.BDD.StepDefinitions.una_edad(java.lang.Integer)
+  And un genero 'w'                                                    # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  When calculo el BMR                                                  # healthcalc.BDD.StepDefinitions.calculo_el_bmr()
+  Then el sistema devuelve 1328                                        # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag1
+Scenario Outline: Calculando el BMR correctamente para genero femenino # healthcalc/HealthCalc.feature:113
+  Given tengo una calculadora de salud                                 # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un peso 60.0                                                     # healthcalc.BDD.StepDefinitions.un_peso(java.lang.Double)
+  And una altura 160                                                   # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  And una edad 30                                                      # healthcalc.BDD.StepDefinitions.una_edad(java.lang.Integer)
+  And un genero 'w'                                                    # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  When calculo el BMR                                                  # healthcalc.BDD.StepDefinitions.calculo_el_bmr()
+  Then el sistema devuelve 1368                                        # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag1
+Scenario Outline: Calculando el BMR correctamente para genero femenino # healthcalc/HealthCalc.feature:114
+  Given tengo una calculadora de salud                                 # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un peso 65.0                                                     # healthcalc.BDD.StepDefinitions.un_peso(java.lang.Double)
+  And una altura 165                                                   # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  And una edad 35                                                      # healthcalc.BDD.StepDefinitions.una_edad(java.lang.Integer)
+  And un genero 'w'                                                    # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  When calculo el BMR                                                  # healthcalc.BDD.StepDefinitions.calculo_el_bmr()
+  Then el sistema devuelve 1408                                        # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag1
+Scenario Outline: Calculando el BMR correctamente para genero femenino # healthcalc/HealthCalc.feature:115
+  Given tengo una calculadora de salud                                 # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un peso 70.0                                                     # healthcalc.BDD.StepDefinitions.un_peso(java.lang.Double)
+  And una altura 170                                                   # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  And una edad 40                                                      # healthcalc.BDD.StepDefinitions.una_edad(java.lang.Integer)
+  And un genero 'w'                                                    # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  When calculo el BMR                                                  # healthcalc.BDD.StepDefinitions.calculo_el_bmr()
+  Then el sistema devuelve 1448                                        # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag1
+Scenario Outline: Calculando el BMR correctamente para genero femenino # healthcalc/HealthCalc.feature:116
+  Given tengo una calculadora de salud                                 # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un peso 75.0                                                     # healthcalc.BDD.StepDefinitions.un_peso(java.lang.Double)
+  And una altura 175                                                   # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  And una edad 45                                                      # healthcalc.BDD.StepDefinitions.una_edad(java.lang.Integer)
+  And un genero 'w'                                                    # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  When calculo el BMR                                                  # healthcalc.BDD.StepDefinitions.calculo_el_bmr()
+  Then el sistema devuelve 1488                                        # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag2
+Scenario Outline: Calculando el ideal weight correctamente para genero masculino # healthcalc/HealthCalc.feature:128
+  Given tengo una calculadora de salud                                           # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un genero 'm'                                                              # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  And una altura 175                                                             # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  When calculo el ideal weight                                                   # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight()
+  Then el sistema devuelve 69.0                                                  # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag2
+Scenario Outline: Calculando el ideal weight correctamente para genero masculino # healthcalc/HealthCalc.feature:129
+  Given tengo una calculadora de salud                                           # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un genero 'm'                                                              # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  And una altura 180                                                             # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  When calculo el ideal weight                                                   # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight()
+  Then el sistema devuelve 73.0                                                  # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag2
+Scenario Outline: Calculando el ideal weight correctamente para genero masculino # healthcalc/HealthCalc.feature:130
+  Given tengo una calculadora de salud                                           # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un genero 'm'                                                              # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  And una altura 185                                                             # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  When calculo el ideal weight                                                   # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight()
+  Then el sistema devuelve 77.0                                                  # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag2
+Scenario Outline: Calculando el ideal weight correctamente para genero masculino # healthcalc/HealthCalc.feature:131
+  Given tengo una calculadora de salud                                           # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un genero 'm'                                                              # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  And una altura 190                                                             # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  When calculo el ideal weight                                                   # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight()
+  Then el sistema devuelve 80.0                                                  # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag2
+Scenario Outline: Calculando el ideal weight correctamente para genero masculino # healthcalc/HealthCalc.feature:132
+  Given tengo una calculadora de salud                                           # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un genero 'm'                                                              # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  And una altura 195                                                             # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  When calculo el ideal weight                                                   # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight()
+  Then el sistema devuelve 84.0                                                  # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag2
+Scenario Outline: Calculando el ideal weight correctamente para genero masculino # healthcalc/HealthCalc.feature:133
+  Given tengo una calculadora de salud                                           # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un genero 'm'                                                              # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  And una altura 200                                                             # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  When calculo el ideal weight                                                   # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight()
+  Then el sistema devuelve 88.0                                                  # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag3
+Scenario: Calculando el ideal weight con altura cero   # healthcalc/HealthCalc.feature:136
+  Given tengo una calculadora de salud                 # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura igual a cero # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_igual_a_cero()
+  Then el sistema lanza una Exception                  # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag4
+Scenario Outline: Calculando el ideal weight con altura negativa # healthcalc/HealthCalc.feature:149
+  Given tengo una calculadora de salud                           # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura negativa -1            # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_negativa(java.lang.Integer)
+  Then el sistema lanza una Exception                            # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag4
+Scenario Outline: Calculando el ideal weight con altura negativa # healthcalc/HealthCalc.feature:150
+  Given tengo una calculadora de salud                           # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura negativa -5            # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_negativa(java.lang.Integer)
+  Then el sistema lanza una Exception                            # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag4
+Scenario Outline: Calculando el ideal weight con altura negativa # healthcalc/HealthCalc.feature:151
+  Given tengo una calculadora de salud                           # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura negativa -120          # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_negativa(java.lang.Integer)
+  Then el sistema lanza una Exception                            # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag5
+Scenario Outline: Calculando el ideal weight con altura positiva pequeña # healthcalc/HealthCalc.feature:161
+  Given tengo una calculadora de salud                                   # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura positiva pequeña 10            # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_positiva_pequeña(java.lang.Integer)
+  Then el sistema lanza una Exception                                    # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag5
+Scenario Outline: Calculando el ideal weight con altura positiva pequeña # healthcalc/HealthCalc.feature:162
+  Given tengo una calculadora de salud                                   # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura positiva pequeña 15            # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_positiva_pequeña(java.lang.Integer)
+  Then el sistema lanza una Exception                                    # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag5
+Scenario Outline: Calculando el ideal weight con altura positiva pequeña # healthcalc/HealthCalc.feature:163
+  Given tengo una calculadora de salud                                   # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura positiva pequeña 20            # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_positiva_pequeña(java.lang.Integer)
+  Then el sistema lanza una Exception                                    # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag5
+Scenario Outline: Calculando el ideal weight con altura positiva pequeña # healthcalc/HealthCalc.feature:164
+  Given tengo una calculadora de salud                                   # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura positiva pequeña 25            # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_positiva_pequeña(java.lang.Integer)
+  Then el sistema lanza una Exception                                    # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag6
+Scenario Outline: Calculando el ideal weight con altura positiva grande # healthcalc/HealthCalc.feature:174
+  Given tengo una calculadora de salud                                  # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura positiva grande 250           # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_positiva_grande(java.lang.Integer)
+  Then el sistema lanza una Exception                                   # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag6
+Scenario Outline: Calculando el ideal weight con altura positiva grande # healthcalc/HealthCalc.feature:175
+  Given tengo una calculadora de salud                                  # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura positiva grande 275           # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_positiva_grande(java.lang.Integer)
+  Then el sistema lanza una Exception                                   # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag6
+Scenario Outline: Calculando el ideal weight con altura positiva grande # healthcalc/HealthCalc.feature:176
+  Given tengo una calculadora de salud                                  # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura positiva grande 300           # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_positiva_grande(java.lang.Integer)
+  Then el sistema lanza una Exception                                   # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag6
+Scenario Outline: Calculando el ideal weight con altura positiva grande # healthcalc/HealthCalc.feature:177
+  Given tengo una calculadora de salud                                  # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura positiva grande 500           # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_positiva_grande(java.lang.Integer)
+  Then el sistema lanza una Exception                                   # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag7
+Scenario Outline: Calculando el ideal weight con genero no valido # healthcalc/HealthCalc.feature:187
+  Given tengo una calculadora de salud                            # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con genero no valido 'a'           # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_genero_no_valido(java.lang.String)
+  Then el sistema lanza una Exception                             # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag7
+Scenario Outline: Calculando el ideal weight con genero no valido # healthcalc/HealthCalc.feature:188
+  Given tengo una calculadora de salud                            # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con genero no valido 'b'           # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_genero_no_valido(java.lang.String)
+  Then el sistema lanza una Exception                             # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag7
+Scenario Outline: Calculando el ideal weight con genero no valido # healthcalc/HealthCalc.feature:189
+  Given tengo una calculadora de salud                            # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con genero no valido 'c'           # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_genero_no_valido(java.lang.String)
+  Then el sistema lanza una Exception                             # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag1
+Scenario Outline: Calculando el ideal weight correctamente para genero femenino # healthcalc/IW.feature:15
+  Given tengo una calculadora de salud                                          # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un genero 'w'                                                             # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  And una altura 155                                                            # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  When calculo el ideal weight                                                  # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight()
+  Then el sistema devuelve 53.0                                                 # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag1
+Scenario Outline: Calculando el ideal weight correctamente para genero femenino # healthcalc/IW.feature:16
+  Given tengo una calculadora de salud                                          # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un genero 'w'                                                             # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  And una altura 160                                                            # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  When calculo el ideal weight                                                  # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight()
+  Then el sistema devuelve 56.0                                                 # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag1
+Scenario Outline: Calculando el ideal weight correctamente para genero femenino # healthcalc/IW.feature:17
+  Given tengo una calculadora de salud                                          # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un genero 'w'                                                             # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  And una altura 165                                                            # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  When calculo el ideal weight                                                  # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight()
+  Then el sistema devuelve 59.0                                                 # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag1
+Scenario Outline: Calculando el ideal weight correctamente para genero femenino # healthcalc/IW.feature:18
+  Given tengo una calculadora de salud                                          # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un genero 'w'                                                             # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  And una altura 170                                                            # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  When calculo el ideal weight                                                  # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight()
+  Then el sistema devuelve 62.0                                                 # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag1
+Scenario Outline: Calculando el ideal weight correctamente para genero femenino # healthcalc/IW.feature:19
+  Given tengo una calculadora de salud                                          # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un genero 'w'                                                             # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  And una altura 175                                                            # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  When calculo el ideal weight                                                  # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight()
+  Then el sistema devuelve 65.0                                                 # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag1
+Scenario Outline: Calculando el ideal weight correctamente para genero femenino # healthcalc/IW.feature:20
+  Given tengo una calculadora de salud                                          # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un genero 'w'                                                             # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  And una altura 180                                                            # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  When calculo el ideal weight                                                  # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight()
+  Then el sistema devuelve 68.0                                                 # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag2
+Scenario Outline: Calculando el ideal weight correctamente para genero masculino # healthcalc/IW.feature:32
+  Given tengo una calculadora de salud                                           # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un genero 'm'                                                              # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  And una altura 175                                                             # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  When calculo el ideal weight                                                   # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight()
+  Then el sistema devuelve 69.0                                                  # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag2
+Scenario Outline: Calculando el ideal weight correctamente para genero masculino # healthcalc/IW.feature:33
+  Given tengo una calculadora de salud                                           # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un genero 'm'                                                              # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  And una altura 180                                                             # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  When calculo el ideal weight                                                   # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight()
+  Then el sistema devuelve 73.0                                                  # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag2
+Scenario Outline: Calculando el ideal weight correctamente para genero masculino # healthcalc/IW.feature:34
+  Given tengo una calculadora de salud                                           # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un genero 'm'                                                              # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  And una altura 185                                                             # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  When calculo el ideal weight                                                   # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight()
+  Then el sistema devuelve 77.0                                                  # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag2
+Scenario Outline: Calculando el ideal weight correctamente para genero masculino # healthcalc/IW.feature:35
+  Given tengo una calculadora de salud                                           # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un genero 'm'                                                              # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  And una altura 190                                                             # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  When calculo el ideal weight                                                   # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight()
+  Then el sistema devuelve 80.0                                                  # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag2
+Scenario Outline: Calculando el ideal weight correctamente para genero masculino # healthcalc/IW.feature:36
+  Given tengo una calculadora de salud                                           # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un genero 'm'                                                              # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  And una altura 195                                                             # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  When calculo el ideal weight                                                   # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight()
+  Then el sistema devuelve 84.0                                                  # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag2
+Scenario Outline: Calculando el ideal weight correctamente para genero masculino # healthcalc/IW.feature:37
+  Given tengo una calculadora de salud                                           # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  And un genero 'm'                                                              # healthcalc.BDD.StepDefinitions.un_genero(java.lang.String)
+  And una altura 200                                                             # healthcalc.BDD.StepDefinitions.una_altura(java.lang.Integer)
+  When calculo el ideal weight                                                   # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight()
+  Then el sistema devuelve 88.0                                                  # healthcalc.BDD.StepDefinitions.el_sistema_devuelve(java.lang.Double)
+
+@tag @tag3
+Scenario: Calculando el ideal weight con altura cero   # healthcalc/IW.feature:40
+  Given tengo una calculadora de salud                 # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura igual a cero # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_igual_a_cero()
+  Then el sistema lanza una Exception                  # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag4
+Scenario Outline: Calculando el ideal weight con altura negativa # healthcalc/IW.feature:53
+  Given tengo una calculadora de salud                           # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura negativa -1            # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_negativa(java.lang.Integer)
+  Then el sistema lanza una Exception                            # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag4
+Scenario Outline: Calculando el ideal weight con altura negativa # healthcalc/IW.feature:54
+  Given tengo una calculadora de salud                           # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura negativa -5            # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_negativa(java.lang.Integer)
+  Then el sistema lanza una Exception                            # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag4
+Scenario Outline: Calculando el ideal weight con altura negativa # healthcalc/IW.feature:55
+  Given tengo una calculadora de salud                           # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura negativa -120          # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_negativa(java.lang.Integer)
+  Then el sistema lanza una Exception                            # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag5
+Scenario Outline: Calculando el ideal weight con altura positiva pequeña # healthcalc/IW.feature:65
+  Given tengo una calculadora de salud                                   # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura positiva pequeña 10            # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_positiva_pequeña(java.lang.Integer)
+  Then el sistema lanza una Exception                                    # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag5
+Scenario Outline: Calculando el ideal weight con altura positiva pequeña # healthcalc/IW.feature:66
+  Given tengo una calculadora de salud                                   # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura positiva pequeña 15            # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_positiva_pequeña(java.lang.Integer)
+  Then el sistema lanza una Exception                                    # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag5
+Scenario Outline: Calculando el ideal weight con altura positiva pequeña # healthcalc/IW.feature:67
+  Given tengo una calculadora de salud                                   # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura positiva pequeña 20            # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_positiva_pequeña(java.lang.Integer)
+  Then el sistema lanza una Exception                                    # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag5
+Scenario Outline: Calculando el ideal weight con altura positiva pequeña # healthcalc/IW.feature:68
+  Given tengo una calculadora de salud                                   # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura positiva pequeña 25            # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_positiva_pequeña(java.lang.Integer)
+  Then el sistema lanza una Exception                                    # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag6
+Scenario Outline: Calculando el ideal weight con altura positiva grande # healthcalc/IW.feature:78
+  Given tengo una calculadora de salud                                  # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura positiva grande 250           # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_positiva_grande(java.lang.Integer)
+  Then el sistema lanza una Exception                                   # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag6
+Scenario Outline: Calculando el ideal weight con altura positiva grande # healthcalc/IW.feature:79
+  Given tengo una calculadora de salud                                  # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura positiva grande 275           # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_positiva_grande(java.lang.Integer)
+  Then el sistema lanza una Exception                                   # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag6
+Scenario Outline: Calculando el ideal weight con altura positiva grande # healthcalc/IW.feature:80
+  Given tengo una calculadora de salud                                  # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura positiva grande 300           # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_positiva_grande(java.lang.Integer)
+  Then el sistema lanza una Exception                                   # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag6
+Scenario Outline: Calculando el ideal weight con altura positiva grande # healthcalc/IW.feature:81
+  Given tengo una calculadora de salud                                  # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con altura positiva grande 500           # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_altura_positiva_grande(java.lang.Integer)
+  Then el sistema lanza una Exception                                   # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag7
+Scenario Outline: Calculando el ideal weight con genero no valido # healthcalc/IW.feature:91
+  Given tengo una calculadora de salud                            # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con genero no valido 'a'           # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_genero_no_valido(java.lang.String)
+  Then el sistema lanza una Exception                             # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag7
+Scenario Outline: Calculando el ideal weight con genero no valido # healthcalc/IW.feature:92
+  Given tengo una calculadora de salud                            # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con genero no valido 'b'           # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_genero_no_valido(java.lang.String)
+  Then el sistema lanza una Exception                             # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+
+@tag @tag7
+Scenario Outline: Calculando el ideal weight con genero no valido # healthcalc/IW.feature:93
+  Given tengo una calculadora de salud                            # healthcalc.BDD.StepDefinitions.tengo_una_calculadora_de_salud()
+  When calculo el ideal weight con genero no valido 'c'           # healthcalc.BDD.StepDefinitions.calculo_el_ideal_weight_con_genero_no_valido(java.lang.String)
+  Then el sistema lanza una Exception                             # healthcalc.BDD.StepDefinitions.el_sistema_lanza_una_exception()
+[INFO] Tests run: 97, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.424 s -- in healthcalc.BDD.RunCucumberTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 117, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.663 s
+[INFO] Finished at: 2025-03-20T19:09:40+01:00
+[INFO] ------------------------------------------------------------------------
