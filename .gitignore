@@ -24,3 +24,10 @@ hs_err_pid*
 replay_pid*
 
 */target/
+*/out/
+.idea/
+
+.DS_Store
+
+.project
+.classpath
