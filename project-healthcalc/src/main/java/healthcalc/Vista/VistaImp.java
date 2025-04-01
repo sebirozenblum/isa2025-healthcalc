@@ -49,7 +49,6 @@ public class VistaImp extends JFrame implements Vista {
         buttonCalcular.setText("Calcular");
         buttonCalcular.setFont(new Font("Chakra Petch", Font.BOLD, 45));
         buttonCalcular.setForeground(Color.red);
-        buttonCalcular.setBackground(Color.red);
         buttonCalcular.setPreferredSize(new Dimension(60, 40));
         buttonCalcular.setHorizontalAlignment(SwingConstants.CENTER);
         panelButton.add(buttonCalcular);
