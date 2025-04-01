@@ -1,7 +1,6 @@
 package healthcalc.Vista;
 
 import healthcalc.Controlador.Controlador;
-import healthcalc.Modelo.HealthCalcImp;
 
 import javax.swing.*;
 import java.awt.*;
@@ -183,7 +182,6 @@ public class VistaImp extends JFrame implements Vista {
         this.setVisible(true);
     }
 
-    @Override
     public void mostrarTexto(String mensaje) {
         this.labelResultado.setText(mensaje);
     }
@@ -194,48 +192,82 @@ public class VistaImp extends JFrame implements Vista {
         this.buttonCalcular.setActionCommand("Calcular");
     }
 
-    @Override
-    public JSpinner getSpinnerAlturaIW() {
-        return spinnerAlturaIW;
-    }
-
-    @Override
-    public JSpinner getSpinnerAlturaBMR() {
-        return spinnerAlturaBMR;
-    }
-
-    @Override
-    public JSpinner getSpinnerEdad() {
-        return spinnerEdad;
-    }
-
-    @Override
     public JTabbedPane getTabbedPane() {
         return tabbedPane;
     }
 
-    @Override
-    public JRadioButton getRadioButtonHombreIW() {
-        return radioButtonHombreIW;
+    public int getAltura() {
+        int selectedIndex = tabbedPane.getSelectedIndex();
+        String tituloPestana = tabbedPane.getTitleAt(selectedIndex);
+        int altura;
+
+        if (tituloPestana.equals("IW")) {
+            altura = (int) spinnerAlturaIW.getValue();
+        } else {
+            altura = (int) spinnerAlturaBMR.getValue();
+        }
+
+        return altura;
+
     }
 
-    @Override
-    public JRadioButton getRadioButtonMujerIW() {
-        return radioButtonMujerIW;
+    public char getSexo() {
+        int selectedIndex = tabbedPane.getSelectedIndex();
+        String tituloPestana = tabbedPane.getTitleAt(selectedIndex);
+        char sexo;
+
+        if (tituloPestana.equals("IW")) {
+            if (radioButtonHombreIW.isSelected()) {
+                sexo = 'm';
+            } else {
+                sexo = 'w';
+            }
+        }
+        else {
+            if (radioButtonHombreBMR.isSelected()) {
+                sexo = 'm';
+            }
+            else {
+                sexo = 'w';
+            }
+        }
+        return sexo;
     }
 
-    @Override
-    public JRadioButton getRadioButtonHombreBMR() {
-        return radioButtonHombreBMR;
+    public int getEdad() {
+        int selectedIndex = tabbedPane.getSelectedIndex();
+        String tituloPestana = tabbedPane.getTitleAt(selectedIndex);
+        int edad;
+
+        if (tituloPestana.equals("BMR")) {
+            edad = (int) spinnerEdad.getValue();
+        }
+        else {
+            throw new IllegalStateException("Pestaña inesperada: " + tituloPestana);
+        }
+
+        return edad;
     }
 
-    @Override
-    public JRadioButton getRadioButtonMujerBMR() {
-        return radioButtonMujerBMR;
+    public float getPeso() {
+        int selectedIndex = tabbedPane.getSelectedIndex();
+        String tituloPestana = tabbedPane.getTitleAt(selectedIndex);
+        float peso;
+
+        if (tituloPestana.equals("BMR")) {
+            peso = Float.parseFloat(textFieldPeso.getText());
+        }
+        else {
+            throw new IllegalStateException("Pestaña inesperada: " + tituloPestana);
+        }
+
+        return peso;
     }
 
-    @Override
-    public JTextField getTextFieldPeso() {
-        return textFieldPeso;
+    public String getMetodo() {
+        int selectedIndex = tabbedPane.getSelectedIndex();
+        String tituloPestana = tabbedPane.getTitleAt(selectedIndex);
+
+        return tituloPestana;
     }
 }

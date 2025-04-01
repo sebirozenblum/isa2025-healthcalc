@@ -10,24 +10,14 @@ public interface Vista {
 
     public void mostrarTexto(String texto);
 
-    public JTabbedPane getTabbedPane();
+    public int getAltura();
 
-    public JSpinner getSpinnerAlturaIW();
+    public char getSexo();
 
-    public JSpinner getSpinnerAlturaBMR();
+    public int getEdad();
 
-    public JSpinner getSpinnerEdad();
+    public float getPeso();
 
-    public JRadioButton getRadioButtonHombreIW();
-
-    public JRadioButton getRadioButtonMujerIW();
-
-    public JRadioButton getRadioButtonHombreBMR();
-
-    public JRadioButton getRadioButtonMujerBMR();
-
-    public JTextField getTextFieldPeso();
-
-
+    public String getMetodo();
 
 }
